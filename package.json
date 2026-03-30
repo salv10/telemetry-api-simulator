@@ -1,0 +1,22 @@
+{
+  "name": "telemetry-api-simulator",
+  "version": "1.0.0",
+  "description": "A Node.js + Express backend project that simulates telemetry data for racing cars.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salv10/telemetry-api-simulator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/salv10/telemetry-api-simulator/issues"
+  },
+  "homepage": "https://github.com/salv10/telemetry-api-simulator#readme"
+}
+ 
