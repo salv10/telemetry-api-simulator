@@ -1,6 +1,6 @@
 import express, { Request, Response } from 'express'
 import carRoutes from './routes/car.routes'
-import telemetryRoutes from './routes/telemtry.routes'
+import telemetryRoutes from './routes/telemetry.routes'
 const app = express()
 
 app.use(express.json())
