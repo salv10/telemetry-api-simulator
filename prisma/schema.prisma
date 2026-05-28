@@ -1,0 +1,49 @@
+// This is your Prisma schema file
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Session {
+  sessionKey  Int       @id
+  sessionName String
+  sessionType String
+  dateStart   DateTime
+  year        Int
+  circuitName String
+  countryName String
+  carData     CarData[]
+  drivers     Driver[]
+}
+
+model Driver {
+  id           Int       @id @default(autoincrement())
+  driverNumber Int
+  fullName     String
+  teamName     String
+  sessionKey   Int
+  session      Session   @relation(fields: [sessionKey], references: [sessionKey])
+  carData      CarData[]
+
+  @@unique([driverNumber, sessionKey])
+}
+
+model CarData {
+  id         Int      @id @default(autoincrement())
+  date       DateTime
+  speed      Int
+  rpm        Int
+  gear       Int
+  throttle   Int
+  brake      Int
+  drs        Int
+  driverId   Int
+  sessionKey Int
+  driver     Driver   @relation(fields: [driverId], references: [id])
+  session    Session  @relation(fields: [sessionKey], references: [sessionKey])
+}

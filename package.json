@@ -20,8 +20,10 @@
   },
   "homepage": "https://github.com/salv10/telemetry-api-simulator#readme",
   "dependencies": {
+    "@prisma/client": "^7.8.0",
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
+    "prisma": "^7.8.0",
     "sqlite3": "^6.0.1",
     "uuid": "^13.0.0"
   },
